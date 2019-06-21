@@ -75,7 +75,7 @@ footer {
   margin-top: 3.5em;
   position: relative;
 }
-footer::before {
+footer::after {
   content: "";
   display: block;
   width: 100%;
@@ -189,9 +189,10 @@ footer::before {
 }
 @media (min-width: 768px) {
   .main-content {
-    width: 90%;
+    width: 80%;
     max-width: 1000px;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 @media (min-width: 992px) {
