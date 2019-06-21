@@ -110,13 +110,10 @@ footer::after {
   text-decoration: none;
   text-transform: uppercase;
   padding: 0.5em;
-  border-bottom: 2px solid transparent;
-  transition: all 0.3s;
+  transition: 0.3s;
 }
 .main-nav a:hover {
-  border-bottom: 2px solid #278da4;
-  color: #278da4;
-  transform: scale(1.2);
+  color: #eeea72;
 }
 
 .img-featured {
@@ -144,7 +141,9 @@ footer::after {
   color: #278da4;
 }
 
-.btn {
+.btn-callout {
+  font-size: 1.1em;
+  background-color: #b13c69;
   color: #fff;
   display: inline-block;
   font-weight: bold;
@@ -153,14 +152,18 @@ footer::after {
   padding: 0.75em 1.5em;
   border-radius: 0.35em;
 }
-.btn-callout {
-  font-size: 1.1em;
-  background-color: #b13c69;
-}
+
 .btn-info {
   font-size: 0.85em;
   background-color: #278da4;
   margin-top: auto;
+  color: #fff;
+  display: inline-block;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0.75em 1.5em;
+  border-radius: 0.35em;
 }
 
 /* MEDIA QUERIES ---------------------------------- */
@@ -168,7 +171,6 @@ footer::after {
   header {
     height: 340px;
   }
-
   header h1 {
     font-size: 3.4em;
   }
@@ -189,7 +191,7 @@ footer::after {
 }
 @media (min-width: 768px) {
   .main-content {
-    width: 80%;
+    width: 90%;
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;

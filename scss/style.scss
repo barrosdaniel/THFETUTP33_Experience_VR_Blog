@@ -11,22 +11,20 @@ $color-text: #343434;
 $color-bg: #3acec2;
 $color-bg-light: #009fe1;
 
-$font-stack-primary: 'Raleway',
-sans-serif;
-$font-stack-secondary: 'Bree Serif',
-serif;
+$font-stack-primary: 'Raleway', sans-serif;
+$font-stack-secondary: 'Bree Serif', serif;
 
 $max-width: 1000px;
 
-// MIXINS
+// MIXINS ------------------------------------ /
+
 @mixin skewed {
   position: relative;
-
   &::after {
     content: '';
     display: block;
     width: 100%;
-    height: 50px;
+    height: 50px; 
     position: absolute;
     transform: skewY(-2deg);
     @content;
@@ -34,7 +32,7 @@ $max-width: 1000px;
 }
 
 @mixin center {
-  width: 80%;
+  width: 90%;
   max-width: $max-width;
   margin-left: auto;
   margin-right: auto;
@@ -68,49 +66,42 @@ ul {
 
 p {
   margin-bottom: 1.25em;
-
   .intro & {
     font-size: 1.2em;
   }
-
 }
 
 a {
   color: $color-primary;
   text-decoration: none;
-
   &:hover {
-    color: $color-secondary;
+    color: $color-secondary;  
   }
-
 }
 
 /* HEADER & FOOTER -------------------------------- */
 
 header {
   height: 460px;
-  background: linear-gradient($color-bg-light, $color-bg), url('../img/bg.jpg') no-repeat;
+  background: linear-gradient($color-bg-light, $color-bg), 
+              url('../img/bg.jpg') no-repeat;
   background-blend-mode: multiply;
   background-size: cover;
-
   h1 {
     color: $white;
     font-size: 4.8em;
     margin-bottom: 0;
     letter-spacing: 1px;
   }
-
   p {
     color: $color-accent;
     font-size: 1.25em;
     margin: 0;
   }
-
   @include skewed {
     background-color: $white;
     bottom: -25px;
   }
-
 }
 
 footer {
@@ -118,13 +109,12 @@ footer {
   height: 100px;
   background-color: $color-shade;
   margin-top: 3.5em;
-
   @include skewed {
     background-color: $color-shade;
     top: -25px;
   }
-
 }
+
 
 /* CONTAINERS ------------------------------------- */
 
@@ -134,41 +124,33 @@ footer {
 
 .intro {
   margin: auto;
-  padding: 1em 1em 3em;
+  padding: 1em 1em 3em; 
 }
 
 /* COMPONENTS ------------------------------------- */
 
 .main-nav {
   margin-top: 1em;
-
   li {
     display: inline-block;
     margin: 0 0.65em;
   }
-
   a {
     color: $white;
     font-size: 0.85em;
     text-decoration: none;
     text-transform: uppercase;
     padding: 0.5em;
-    border-bottom: 2px solid transparent;
-    transition: all 0.3s;
-
+    transition: 0.3s;
     &:hover {
-      border-bottom: 2px solid $color-primary;
-      color: $color-primary;
-      transform: scale(1.2);
+      color: $color-accent;  
     }
-
   }
-
 }
 
 .img-featured {
   width: 165px;
-  border: 4px solid $white;
+  border: 4px solid $white; 
   border-radius: 50%;
   margin-top: 75px;
   position: relative;
@@ -181,19 +163,20 @@ footer {
   padding: 1.5em 1em;
   border: 1px solid $color-shade;
   border-radius: 0.25em;
-
   h1 {
     margin: 0.35em 0 0;
     line-height: 1.25;
-  }
-
+  }  
   .icon,
   h1 {
     color: $color-primary;
   }
 }
 
-.btn {
+.btn-callout {
+  font-size: 1.1em;
+  background-color: $color-secondary;
+  
   color: $white;
   display: inline-block;
   font-weight: bold;
@@ -201,18 +184,20 @@ footer {
   text-transform: uppercase;
   padding: 0.75em 1.5em;
   border-radius: 0.35em;
+}
 
-  &-callout {
-    font-size: 1.1em;
-    background-color: $color-secondary;
-  }
-
-  &-info {
-    font-size: 0.85em;
-    background-color: $color-primary;
-    margin-top: auto;
-  }
-
+.btn-info {
+  font-size: 0.85em;
+  background-color: $color-primary;  
+  margin-top: auto;
+  
+  color: $white;
+  display: inline-block;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0.75em 1.5em;
+  border-radius: 0.35em;
 }
 
 
@@ -221,12 +206,10 @@ footer {
 @media (max-width: 575px) {
   header {
     height: 340px;
+    h1 {
+      font-size: 3.4em;
+    }
   }
-
-  header h1 {
-    font-size: 3.4em;
-  }
-
   .img-featured {
     display: none;
   }
@@ -236,8 +219,7 @@ footer {
   .main-content {
     display: flex;
     flex-wrap: wrap;
-  }
-
+  }  
   .card {
     flex: 1;
   }
@@ -253,7 +235,6 @@ footer {
   header {
     background-position: 0 0, 0 45%;
   }
-
   .intro {
     width: 45%;
   }
