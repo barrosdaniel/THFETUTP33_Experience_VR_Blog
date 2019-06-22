@@ -28,7 +28,8 @@ header {
   }
 }
 
-@media (max-width: $break-xs) {
+@include mq('xs') {
+
   header {
     height: 340px;
 
@@ -36,9 +37,10 @@ header {
       font-size: 3.4em;
     }
   }
+
 }
 
-@media (min-width: $break-l) {
+@include mq('lg') {
   header {
     background-position: 0 0, 0 45%;
   }
