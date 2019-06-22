@@ -6,7 +6,7 @@
 .main-content {
   @include flexy($wrap: wrap);
 
-  @media (min-width: $break-m) {
+  @include mq('med') {
     @include center(90%);
   }
 
