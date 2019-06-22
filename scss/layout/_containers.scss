@@ -23,7 +23,7 @@
   margin: auto;
   padding: 1em 1em 3em;
 
-  @media (min-width: $break-l) {
+  @include mq('lg') {
     width: 45%;
   }
 
