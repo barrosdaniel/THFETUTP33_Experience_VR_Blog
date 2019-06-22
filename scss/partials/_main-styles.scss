@@ -148,7 +148,7 @@ footer {
 
 /* MEDIA QUERIES ---------------------------------- */
 
-@media (max-width: 575px) {
+@media (max-width: $break-xs) {
   header {
     height: 340px;
 
@@ -162,7 +162,7 @@ footer {
   }
 }
 
-@media (min-width: 576px) {
+@media (min-width: $break-s) {
   .main-content {
     display: flex;
     flex-wrap: wrap;
@@ -173,13 +173,13 @@ footer {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: $break-m) {
   .main-content {
     @include center;
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: $break-l) {
   header {
     background-position: 0 0, 0 45%;
   }
